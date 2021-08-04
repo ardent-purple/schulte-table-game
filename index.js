@@ -94,7 +94,10 @@ function handlePlayfieldClick(e) {
     game.lastNumber += 1
   } else {
     // if we miss
-    console.log('miss!')
+    card.classList.add('miss')
+    setTimeout(() => {
+      card.classList.remove('miss')
+    }, 1000)
   }
 }
 

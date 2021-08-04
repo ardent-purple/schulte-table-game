@@ -63,6 +63,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 30px;
+  border-radius: 10px;
 
   /* prevent selection */
   -webkit-touch-callout: none; /* iOS Safari */
@@ -74,8 +75,24 @@ body {
 }
 
 .playcard.hit {
-  background-color: darkblue;
+  background-color: #165530;
   color: whitesmoke;
+}
+
+.playcard.miss {
+  animation-name: miss-animation;
+  animation-duration: 1s;
+}
+
+@keyframes miss-animation {
+  from {
+    background-color: rgba(134, 0, 0, 1);
+    color: whitesmoke;
+  }
+  to {
+    background-color: initial;
+    color: initial;
+  }
 }
 
 .playcard-4 {
