@@ -8,6 +8,10 @@ const game = {
 }
 const playfield = document.querySelector('.playfield')
 const startButton = document.querySelector('.start-button')
+const widthInput = document.querySelector('#width-input')
+const heightInput = document.querySelector('#height-input')
+const widthDisplay = document.querySelector('.width-value')
+const heightDisplay = document.querySelector('.height-value')
 
 // Knuth shuffle
 function shuffle(array) {
@@ -94,5 +98,21 @@ function handlePlayfieldClick(e) {
   }
 }
 
+// function to read and update width and height
+function updateDimensions() {
+  const width = +widthInput.value
+  const height = +heightInput.value
+
+  // update gameState
+  game.width = width
+  game.height = height
+
+  // display new
+  widthDisplay.textContent = width
+  heightDisplay.textContent = height
+}
+
 playfield.addEventListener('click', handlePlayfieldClick)
+widthInput.addEventListener('change', updateDimensions)
+heightInput.addEventListener('change', updateDimensions)
 startButton.addEventListener('click', startGame)
