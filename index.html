@@ -16,8 +16,8 @@
       цветом. Как только все клетки будут закрашены, игра начинается сначала.
       Расширение:
       - Отметка ошибки клика на не то поле
-      - Описание правил и кнопка "старт/рестарт" - Счёт времени для
-      попытки
+      - Описание правил
+      - Счёт времени для попытки
       - Изменение размера таблицы (бегунки от и до)
       - Система подсчета очков (формальная, считает время и число ошибок для каждого размера
       таблицы, сортировка по числу ошибок убывающее, по времени возрастающее)
@@ -36,6 +36,18 @@
 
       <div class="options">
         <button class="start-button">New game</button>
+
+        <div class="input-group">
+          <label for="width-input">Width</label>
+          <input type="range" id="width-input" min="4" max="6" step="1" />
+          <span class="width-value">5</span>
+        </div>
+        <div class="input-group">
+          <label for="height-input">Height</label>
+          <input type="range" id="height-input" min="4" max="6" step="1" />
+          <span class="width-value">5</span>
+        </div>
+        <button class="rules-button">Rules?</button>
       </div>
     </div>
 

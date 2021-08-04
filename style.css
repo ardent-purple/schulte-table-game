@@ -94,16 +94,47 @@ body {
 
 .options {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-  padding: 15px 0;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding: 10px 15px;
+  align-items: stretch;
+}
+
+.input-group {
+  flex: 1;
+  font-size: 24px;
+  display: flex;
+  padding: 15px 0px;
+}
+
+.input-group > * {
+  flex: 0;
+}
+
+.input-group > span,
+.input-group label {
+  margin: 0 5px;
+}
+
+.input-group > input {
+  flex: 1;
+}
+
+.rules-button {
+  border: 0;
+  font-size: 40px;
+  padding: 5px 40px;
+  font-family: 'Oswald', sans-serif;
+  border-radius: 10px;
+  color: whitesmoke;
+  background-color: rgba(81, 87, 110, 1);
+  margin: 10px 0;
 }
 
 .start-button {
   border: 0;
   font-size: 40px;
-  padding: 20px 40px;
+  padding: 5px 40px;
   font-family: 'Oswald', sans-serif;
   border-radius: 10px;
   color: whitesmoke;

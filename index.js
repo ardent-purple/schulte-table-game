@@ -1,7 +1,7 @@
 const game = {
   // options
-  width: 6,
-  height: 6,
+  width: 5,
+  height: 5,
   // state
   playing: false, // are we playing?
   lastNumber: 0, // last number player picked from the field
