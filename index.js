@@ -8,10 +8,15 @@ const game = {
 }
 const playfield = document.querySelector('.playfield')
 const startButton = document.querySelector('.start-button')
+
 const widthInput = document.querySelector('#width-input')
 const heightInput = document.querySelector('#height-input')
 const widthDisplay = document.querySelector('.width-value')
 const heightDisplay = document.querySelector('.height-value')
+
+const rulesModal = document.querySelector('.rules-backdrop')
+const rulesButton = document.querySelector('.rules-button')
+const rulesOkButton = document.querySelector('.rules-ok-button')
 
 // Knuth shuffle
 function shuffle(array) {
@@ -115,7 +120,15 @@ function updateDimensions() {
   heightDisplay.textContent = height
 }
 
+// display or hide rules
+function toggleRules() {
+  rulesModal.classList.toggle('active')
+}
+
 playfield.addEventListener('click', handlePlayfieldClick)
 widthInput.addEventListener('change', updateDimensions)
 heightInput.addEventListener('change', updateDimensions)
+updateDimensions() // initial dimensions
 startButton.addEventListener('click', startGame)
+rulesButton.addEventListener('click', toggleRules)
+rulesOkButton.addEventListener('click', toggleRules)

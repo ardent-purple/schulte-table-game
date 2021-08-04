@@ -10,38 +10,57 @@
   <body>
     <!--
       Расширение:
-      - Отметка ошибки клика на не то поле
       - Описание правил
       - Счёт времени для попытки
       - Система подсчета очков (формальная, считает время и число ошибок для каждого размера
       таблицы, сортировка по числу ошибок убывающее, по времени возрастающее)
       - Разноцветная таблица Шульте
     -->
-    <div class="wrapper">
-      <div class="header">
-        <h1>Schulte table</h1>
-      </div>
+    <div class="superwrapper">
+      <div class="wrapper">
+        <div class="header">
+          <h1>Schulte table</h1>
+        </div>
 
-      <div class="game">
-        <div class="playfield-wrapper">
-          <div class="playfield"></div>
+        <div class="game">
+          <div class="playfield-wrapper">
+            <div class="playfield"></div>
+          </div>
+        </div>
+
+        <div class="options">
+          <button class="start-button">New game</button>
+
+          <div class="input-group">
+            <label for="width-input">Width</label>
+            <input type="range" id="width-input" min="4" max="6" step="1" />
+            <span class="width-value">5</span>
+          </div>
+          <div class="input-group">
+            <label for="height-input">Height</label>
+            <input type="range" id="height-input" min="4" max="6" step="1" />
+            <span class="height-value">5</span>
+          </div>
+          <button class="rules-button">Rules?</button>
         </div>
       </div>
+    </div>
 
-      <div class="options">
-        <button class="start-button">New game</button>
+    <div style="display: none"></div>
 
-        <div class="input-group">
-          <label for="width-input">Width</label>
-          <input type="range" id="width-input" min="4" max="6" step="1" />
-          <span class="width-value">5</span>
+    <div class="rules-backdrop">
+      <div class="rules-wrap">
+        <div class="rules-header">
+          <h1>Rules</h1>
         </div>
-        <div class="input-group">
-          <label for="height-input">Height</label>
-          <input type="range" id="height-input" min="4" max="6" step="1" />
-          <span class="height-value">5</span>
+        <p class="rules-body">
+          The rules are simple: just click the numbers in the right order. Try
+          to do it fast as well as look to the center of the playfield for
+          maximum benefit for your concentration and peripheral vision.
+        </p>
+        <div class="rules-footer">
+          <button class="rules-ok-button">Ok, got it!</button>
         </div>
-        <button class="rules-button">Rules?</button>
       </div>
     </div>
 

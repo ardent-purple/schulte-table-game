@@ -1,23 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 body {
+  font-family: 'Oswald', sans-serif;
+  overflow: hidden;
+  margin: 0;
+}
+
+.superwrapper {
   background: rgb(51, 77, 80);
   background: linear-gradient(
     132deg,
     rgba(51, 77, 80, 1) 0%,
     rgba(203, 202, 165, 1) 100%
   );
+  width: auto;
   height: 100vh;
-  overflow: hidden;
-  font-family: 'Oswald', sans-serif;
+  padding: 10px;
 }
 
 .wrapper {
-  margin: 0px auto;
-  width: 100%;
-  max-width: 500px;
+  margin: 0 auto;
   background-color: antiquewhite;
   border-radius: 20px;
+  max-width: 520px;
 }
 
 .header {
@@ -137,11 +142,14 @@ body {
   flex: 1;
 }
 
-.rules-button {
+button {
+  font-family: 'Oswald', sans-serif;
   border: 0;
+}
+
+.rules-button {
   font-size: 40px;
   padding: 5px 40px;
-  font-family: 'Oswald', sans-serif;
   border-radius: 10px;
   color: whitesmoke;
   background-color: rgba(81, 87, 110, 1);
@@ -149,11 +157,68 @@ body {
 }
 
 .start-button {
-  border: 0;
   font-size: 40px;
   padding: 5px 40px;
-  font-family: 'Oswald', sans-serif;
   border-radius: 10px;
   color: whitesmoke;
   background-color: rgba(41, 67, 70, 1);
+}
+
+/* rules modal */
+
+.rules-backdrop {
+  z-index: -1;
+  background-color: transparent;
+  transition: background-color 0.8s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.rules-backdrop.active {
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  transition: background-color 0.8s ease-out;
+}
+
+.rules-wrap {
+  background-color: #f9feff;
+  border-radius: 20px;
+  padding: 15px;
+  margin: 15px;
+  transform: translateY(-120%);
+  transition: all 0.8s ease-out;
+  opacity: 0;
+  max-width: 520px;
+  margin: 50px auto;
+}
+
+.rules-backdrop.active .rules-wrap {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.8s ease-out;
+}
+
+.rules-header h1 {
+  font-size: 40px;
+  text-align: center;
+  margin: 0.3em 0;
+}
+
+.rules-body {
+  font-size: 24px;
+  text-align: justify;
+}
+.rules-footer {
+  text-align: center;
+}
+
+.rules-ok-button {
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color: rgba(41, 67, 70, 1);
+  color: whitesmoke;
+  font-size: 30px;
 }
