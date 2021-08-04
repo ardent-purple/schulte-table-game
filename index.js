@@ -7,6 +7,7 @@ const game = {
   lastNumber: 0, // last number player picked from the field
 }
 const playfield = document.querySelector('.playfield')
+const startButton = document.querySelector('.start-button')
 
 // Knuth shuffle
 function shuffle(array) {
@@ -92,6 +93,6 @@ function handlePlayfieldClick(e) {
     console.log('miss!')
   }
 }
-playfield.addEventListener('click', handlePlayfieldClick)
 
-startGame()
+playfield.addEventListener('click', handlePlayfieldClick)
+startButton.addEventListener('click', startGame)

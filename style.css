@@ -63,6 +63,14 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 30px;
+
+  /* prevent selection */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently */
 }
 
 .playcard.hit {
@@ -82,4 +90,22 @@ body {
 }
 .playcard-7 {
   flex-basis: 14.28571%;
+}
+
+.options {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.start-button {
+  border: 0;
+  font-size: 40px;
+  padding: 20px 40px;
+  font-family: 'Oswald', sans-serif;
+  border-radius: 10px;
+  color: whitesmoke;
+  background-color: rgba(41, 67, 70, 1);
 }
