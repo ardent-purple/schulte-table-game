@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 body {
   background: rgb(51, 77, 80);
   background: linear-gradient(
@@ -7,18 +9,32 @@ body {
   );
   height: 100vh;
   overflow: hidden;
+  font-family: 'Oswald', sans-serif;
 }
 
 .wrapper {
   margin: 0px auto;
   width: 100%;
-  max-width: 550px;
+  max-width: 500px;
   background-color: antiquewhite;
   border-radius: 20px;
 }
 
+.header {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 25px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 40px;
+}
+
 .game {
-  padding: 25px;
+  padding: 20px;
 }
 
 /* strict aspect ratio */
@@ -46,8 +62,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 30px;
+}
+
+.playcard.hit {
+  background-color: darkblue;
+  color: whitesmoke;
+}
+
+.playcard-4 {
+  flex-basis: 25%;
 }
 
 .playcard-5 {
   flex-basis: 20%;
+}
+.playcard-6 {
+  flex-basis: 16.66666%;
+}
+.playcard-7 {
+  flex-basis: 14.28571%;
 }
